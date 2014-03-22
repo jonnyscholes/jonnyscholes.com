@@ -1,29 +1,89 @@
 <!DOCTYPE html>
-  <html class="no-js">
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Jonny Scholes</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
+<html>
+<head>
+  <title>Jonny Scholes</title>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+
+      color: #fff;
+      font-family: 'Helvetica', sans-serif;
+      letter-spacing: 1px;
+
+      position: relative;
+      overflow: hidden;
+      line-height: 1.5em;
+    }
+    #stage {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+    article {
+      margin: 0 auto;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      width: 50%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    header {
+
+    }
+
+    footer {
+      font-size: 0.5em;
+    }
+
+    a {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <article>
+    <header>
       <h1>Hi.</h1>
-      <p>I'm Jonny. A twenty something year old web developer, photographer, designer and 'hacker' from Hobart, Tasmania. Sometimes I paint things to.</p>
-      <b>Some stuff I work on:</b>
-      <ul>
-        <li><a href="http://trapezium.io/">Trapezium</a></li>
-        <li><a href="http://web.dev42.co/">Web Developer 42</a></li>
-      </ul>
-      <b>Some of my experiments:</b>
-      <ul>
-        <li><a href="/experiments/mapfont/">Mapfont</a></li>
-        <li><a href="http://jonnyscholes.github.io/transparentCursorArea/">Full page image annotation concept</a></li>
-      </ul>
-      <b>Places to find me:</b>
-      <ul>
-        <li><a href="http://twitter.com/jonnyscholes">Twitter</a></li>
-        <li><a href="http://www.flickr.com/jonnyscholes">Flickr</a></li>
-      </ul>
-      <p>One day I'll have a schwanky looking website with all of the things on it. Until then, this will have to do.</p>
-    </body>
+      <h2>I'm Jonny. A twenty something year old web developer, photographer, designer and 'hacker' from Hobart, Tasmania. Sometimes I paint things to.</h2>
+    </header>
+
+    <h3>Some stuff I work on:</h3>
+    <ul>
+      <li><a href="http://trapezium.io/">Trapezium - Ongoing</a></li>
+      <li><a href="http://web.dev42.co/">Web Developer 42 - Ongoing</a></li>
+    </ul>
+
+    <h3>Some of my experiments:</h3>
+    <ul>
+      <li><a href="/experiments/artscapes/">Artscapes - 2014</a></li>
+      <li><a href="/experiments/mapfont/">Mapfont - 2014</a></li>
+      <li><a href="http://jonnyscholes.github.io/transparentCursorArea/">Full page image annotation concept - 2013</a></li>
+    </ul>
+
+    <h3>Places to find me:</h3>
+    <ul>
+      <li><a href="http://twitter.com/jonnyscholes">Twitter</a></li>
+      <li><a href="http://www.flickr.com/jonnyscholes">Flickr</a></li>
+      <li><a href="http://github.com/jonnyscholes">Github</a></li>
+    </ul>
+
+    <p>When I'm not taking photos or curled up on the carpet at home nursing my fingers I work at <a href="http://takeflight.com.au/">Takeflight</a> with awesome people in a <a href="http://typewriterfactory.com/">freaking amazeballs place.</a></p>
+
+    <footer>&copy; 2014 Jonny</footer>
+  </article>
+  <canvas id="stage" width="1280" height="1014"></canvas>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

@@ -27,11 +27,6 @@
     stage.drawImage(rawStage, 0, y, rawStage.width, size, 0, getRandomInRange(0,rawStage.height), rawStage.width, size);
   };
 
-  BackgroundCheck.init({
-    targets: '.page',
-    images: '#stage'
-  });
-
 }(jQuery));
 
 

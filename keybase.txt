@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/jonny
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jonnyscholes.com
+  * I am jonny (https://keybase.io/jonny) on keybase.
+  * I have a public key with fingerprint A8C4 9E3B D4A7 50E3 2DB4  7105 58DF C496 2EBF 8822
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "a8c49e3bd4a750e32db4710558dfc4962ebf8822",
+            "host": "keybase.io",
+            "key_id": "58dfc4962ebf8822",
+            "uid": "b6928ff58ae323aadedac2910512f200",
+            "username": "jonny"
+        },
+        "service": {
+            "hostname": "jonnyscholes.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1409618485,
+    "expire_in": 157680000,
+    "prev": "42d81f3e64c0b0b1246ac0ed7b95f7b4d03abf29adcb35b546acc50ff2279477",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.3.1
+Comment: https://keybase.io/crypto
+
+yMHiAnicbVFrSBRRFB7X1FyVQtsQqbQbWKHJzOzMzsz+SCmlwISoFBJrmTtzZ3ds
+nVlnxse2+CAjiBAEpQR/RBm9oDRShCgQlcyyMCFDJERYS8wkLKGIsjtS0I/un8M9
+3+sczkhKLOGM6b0cadBfF0ZiXgyu1BAn4lLZCIC6HAbeCDiD1ouian5khAxVs4AX
+iLzECMgNZUbkWBK5aRkyHEWyLC8rGPHQCCo8T9MgFwR001ZgGyiaKE/VcQ9/fKqM
+u//h16wD0CPQvKKwvIjN3aIoI1mUaAFHULRCk6RNNJGhiVUIsyt1TQuDhlyAW7Wq
+hOyB7dx/YVMK6EFk5kl6FRaHDN3SJT2I0YBlhby22AqHbHYdgr4/Pj6oajJeHAtq
+kWGquga8FGZKlmobUwwpeCie4dlcgOpDqoF8qs1gOQ9P4mfHoFpsydAyTylu5GEk
+EpKQohmPKJFI5qDAKhxkZNItQoUWRFmCbhayNiyxpKLQNCcwHAfszao1HXg9eEzR
+jy1N1a+JVo2BQMPQYMUGIsZJxMc57NMRzsTNfw9qrmwkWjLuXP+42O7K3DQ5vZbp
+6D9b0F2anlgvHLm2cE6/cu8wHZ8VmO1LGOsa9kYz5ext45WHgq1R4mZZoOVBWkGy
+sbqw1JgU9lmXJvt/tb8qJRpHm5bbqJGOkurv0SFnf0Zh6mJxnFrzpjMpup/zpl/I
+mZ3vunG01Fk8MNi7E8S2uBxPbk2V3e3plKquOsoPpOx9vA/cXj4VevhtdyA4l3Vw
+irw4XvTO5f/0LL/Oke+cOJ2Tfyyyx/qatuuta+knuZ3Tmktm5lPF41ufdnf2pCUO
+f3g+EerKHks6GRhoQz2tfU0Tn2emCysSyou+KKPnd7xsnusoquDuvx97tLpl7Ufy
+bzdIDww=
+=n61A
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jonny
+
+==================================================================

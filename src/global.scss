@@ -1,0 +1,45 @@
+html {
+	height: 100%;
+}
+body {
+	margin: 0;
+	height: 100%;
+
+	color: #fff;
+	font-family: 'Helvetica', sans-serif;
+	letter-spacing: 1px;
+
+	position: relative;
+	overflow: hidden;
+	line-height: 1.5em;
+}
+#stage {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+article {
+	margin: 0 auto;
+	background: rgba(0,0,0,0.6);
+	padding: 10px;
+	width: 50%;
+	height: 100%;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+}
+
+header {
+
+}
+
+footer {
+	font-size: 0.5em;
+}
+
+a {
+	color: #fff;
+}

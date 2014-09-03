@@ -1,0 +1,47 @@
+extends _layout
+block content
+	include _menu
+
+	article
+		header
+			h1 Hi
+			h2 I'm Jonny. A twenty something year old web developer, photographer, designer and hacker from Hobart, Tasmania. Sometimes I paint things to.
+		
+		h3 Some stuff I work on:
+		ul
+			li
+				a(href='http://trapezium.io/') Trapezium - Ongoing
+			li
+				a(href='http://altrove.totesprofe.sh/') AlTrove - an alternate interface for TROVE - Ongoing
+			li
+				a(href='http://web.dev42.co/') Web Developer 42 - Ongoing
+		
+		h3 Some of my experiments:
+		ul
+			li
+				a(href='/experiments/artscapes/') Artscapes - February 2014
+			li
+				a(href='/experiments/mapfont/') Mapfont - February 2014
+			li
+				a(href='/experiments/wavey/') Wavey - August 2014
+		
+		h3 Places to find me:
+		ul
+			li
+				a(href='http://twitter.com/jonnyscholes') Twitter
+			li
+				a(href='http://www.flickr.com/jonnyscholes') Flickr
+			li
+				a(href='http://github.com/jonnyscholes') Github
+		
+		h3 Contact me:
+		ul
+			li
+				a(href='mailto://jonnyscholes@gmail.com') jonnyscholes@gmail.com
+		
+		p I work for #[a(href='http://takeflight.com.au/') Takeflight] with awesome people in a great local coworking space called #[a(href='http://typewriterfactory.com/') The Typewriter Factory]. Come and say hello!
+		
+		footer © 2014 Jonny
+	
+	canvas#stage(height='1014', width='1280')
+

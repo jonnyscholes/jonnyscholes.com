@@ -1,0 +1,3 @@
+for toplevel in menu
+	for page in toplevel.items
+		a(href="/#{toplevel.slug}/#{page}/index.html")= page.replace('-', ' ')

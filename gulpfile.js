@@ -104,6 +104,12 @@ gulp.task('images', function () {
 		.pipe(gulp.dest(build));
 });
 
+// Move Misc Files
+gulp.task('move', function () {
+	return gulp.src(src + 'keybase.txt')
+		.pipe(gulp.dest(build));
+});
+
 
 // Static Server
 gulp.task('connect', function() {
@@ -125,7 +131,7 @@ gulp.task('watchfiles', function () {
 gulp.task('default', ['watch']);
 
 // Build
-gulp.task('build', ['templates', 'images', 'styles', 'scripts']);
+gulp.task('build', ['templates', 'images', 'styles', 'scripts', 'move']);
 
 // Watch
 gulp.task('watch', ['build', 'connect', 'watchfiles']);
@@ -133,7 +139,8 @@ gulp.task('watch', ['build', 'connect', 'watchfiles']);
 
 // Helpers
 function getFoldersFrom(paths) {
-  return paths.filter(isNotJade).filter(isNotJs).filter(isNotScss).filter(isNotCruft);
+  //@todo: Apparently fs.lstatSync('/the/path').isDirectory() is a thing - use that!!
+  return paths.filter(isNotJade).filter(isNotJs).filter(isNotScss).filter(isNotCruft).filter(isNotTxt);
 }
 
 function isNotJade(element) {
@@ -142,6 +149,10 @@ function isNotJade(element) {
 
 function isNotJs(element) {
   return element.indexOf('.js') === -1;
+}
+
+function isNotTxt(element) {
+  return element.indexOf('.txt') === -1;
 }
 
 function isNotScss(element) {

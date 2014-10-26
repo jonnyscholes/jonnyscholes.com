@@ -5,50 +5,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="/global.css"/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Cinzel"/>
+    <link rel="stylesheet" type="text/css" href="global.css"/>
   </head>
-  <body><a href="/blog/peer-privacy-responsiblity/index.html">peer privacy-responsiblity</a><a href="/blog/too-ordinary/index.html">too ordinary</a><a href="/experiments/artscapes/index.html">artscapes</a><a href="/experiments/mapfont/index.html">mapfont</a><a href="/experiments/wavey/index.html">wavey</a><a href="/goldenoldies/images/index.html">images</a><a href="/images/1.jpg/index.html">1.jpg</a><a href="/images/10.jpg/index.html">10.jpg</a><a href="/images/2.jpg/index.html">2.jpg</a><a href="/images/3.jpg/index.html">3.jpg</a><a href="/images/4.jpg/index.html">4.jpg</a><a href="/images/5.jpg/index.html">5.jpg</a><a href="/images/6.jpg/index.html">6.jpg</a><a href="/images/7.jpg/index.html">7.jpg</a><a href="/images/8.jpg/index.html">8.jpg</a><a href="/images/9.jpg/index.html">9.jpg</a>
-    <article>
-      <header>
-        <h1>Hi</h1>
-        <h2>I'm Jonny. A twenty something year old web developer, photographer, designer and hacker from Hobart, Tasmania. Sometimes I paint things to.</h2>
-      </header>
-      <h3>Some stuff I work on:</h3>
+  <body>
+    <!--include _menu--><a href="#" class="entry">Jonny Scholes</a>
+    <div class="paralax">
+      <div class="item"><img src="images/1.png"/></div>
+      <div class="item"><img src="images/2.png"/></div>
+      <div class="item"><img src="images/3.png"/></div>
+      <div class="item"><img src="images/4.png"/></div>
+      <div class="item"><img src="images/5.png"/></div>
+      <div class="item"><img src="images/6.png"/></div>
+      <div class="item"><img src="images/7.png"/></div>
+      <div class="item"><img src="images/8.png"/></div>
+      <div class="item"><img src="images/9.png"/></div>
+    </div>
+    <div class="top stripes">
       <ul>
-        <li><a href="http://trapezium.io/">Trapezium - Ongoing</a></li>
-        <li><a href="http://altrove.totesprofe.sh/">AlTrove - an alternate interface for TROVE - Ongoing</a></li>
-        <li><a href="http://web.dev42.co/">Web Developer 42 - Ongoing</a></li>
+        <li>
+          <canvas></canvas>
+        </li>
+        <li>
+          <canvas></canvas>
+        </li>
+        <li>
+          <canvas></canvas>
+        </li>
+        <li>
+          <canvas></canvas>
+        </li>
+        <li>
+          <canvas></canvas>
+        </li>
       </ul>
-      <h3>Some of my experiments:</h3>
+    </div>
+    <div class="bottom stripes">
       <ul>
-        <li><a href="/experiments/artscapes/">Artscapes - February 2014</a></li>
-        <li><a href="/experiments/mapfont/">Mapfont - February 2014</a></li>
-        <li><a href="/experiments/wavey/">Wavey - August 2014</a></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
-      <h3>Places to find me:</h3>
-      <ul>
-        <li><a href="http://twitter.com/jonnyscholes">Twitter</a></li>
-        <li><a href="http://www.flickr.com/jonnyscholes">Flickr</a></li>
-        <li><a href="http://github.com/jonnyscholes">Github</a></li>
-      </ul>
-      <h3>Contact me:</h3>
-      <ul>
-        <li><a href="mailto://jonnyscholes@gmail.com">jonnyscholes@gmail.com</a></li>
-      </ul>
-      <p>I work for <a href="http://takeflight.com.au/">Takeflight</a> with awesome people in a great local coworking space called <a href="http://typewriterfactory.com/">The Typewriter Factory</a>. Come and say hello!</p>
-      <footer>© 2014 Jonny</footer>
-    </article>
-    <canvas id="stage" height="1014" width="1280"></canvas>
-    <script src="/plugins.js"></script>
-    <script src="/global.js"></script>
-    <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-12958212-7', 'jonnyscholes.com');
-      ga('send', 'pageview');
-    </script>
+    </div>
+    <div class="page">
+      <article>
+        <header>
+          <p>I'm Jonny, a twenty something year old web developer, painter, photographer, designer and hacker from Hobart, Tasmania.</p>
+          <p>I work for <a href="http://takeflight.com.au/">Takeflight</a> with awesome people in a great local coworking space called <a href="http://typewriterfactory.com/">The Typewriter Factory</a>. Come and say hello!</p>
+        </header>
+        <div class="projects">
+          <div class="project-list">
+            <h3>Projects:</h3>
+            <ul>
+              <li class="project-list--item"><a href="http://trapezium.io/"><img src="./images/trapezium.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>Trapezium - Ongoing</h2>
+                    <div class="description">Trapezium is a 	news reader that presents the last 24 hours news (EST) based on how negative or positive the content is. Choose what you read based on how you want to feel!</div>
+                  </div></a></li>
+              <li class="project-list--item"><a href="http://altrove.totesprofe.sh/"><img src="./images/altrove.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>AlTrove - Ongoing</h2>
+                    <div class="description">For GovHack 2014 we (#totesprofesh) recreated the homepage for TROVE.</div>
+                  </div></a></li>
+              <li class="project-list--item"><a href="http://web.dev42.co/"><img src="./images/wd42.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>Web Developer 42 - Ongoing</h2>
+                    <div class="description">Each month Josh Gillies and I run a meetup where we have local web developers talk about a topic. Beer and pizza is provided and its always a wicked night. Come and play!</div>
+                  </div></a></li>
+              <li class="project-list--item"><a href="http://springclean.me/"><img src="./images/springclean.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>SpringClean.me - Ongoing</h2>
+                    <div class="description">As a known privacy/security advocate in my extended social circles, I am often asked "What should I do to stay secure?". I got sick of reeling off the same list over and over so I made an interactive checklist to send people to.</div>
+                  </div></a></li>
+            </ul>
+          </div>
+          <div class="project-list">
+            <h3>Selected Works:</h3>
+            <ul>
+              <li class="project-list--item"><a href="/experiments/artscapes/"><img src="./images/artscapes.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>Artscapes - February 2014</h2>
+                    <div class="description"></div>
+                  </div></a></li>
+              <li class="project-list--item"><a href="/experiments/mapfont/"><img src="./images/herebedragons.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>Mapfont - February 2014</h2>
+                    <div class="description"></div>
+                  </div></a></li>
+              <li class="project-list--item"><a href="/experiments/wavey/"><img src="./images/wavey.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>Wavey - August 2014</h2>
+                    <div class="description"></div>
+                  </div></a></li>
+            </ul>
+          </div>
+          <div class="project-list">
+            <h3>Other stuff:</h3>
+            <ul>
+              <li class="project-list--item"><a href="/experiments/rgbto/"><img src="./images/rgbto.jpg" class="project-list--item-thumb"/>
+                  <div class="project-list--item-meta">
+                    <h2>RGBto - October 2014</h2>
+                    <div class="description">As a frontend developer there are lots of little tools I need from time to time. Character counts, color name generators, unit converters etc. This is a sigle page app thingy I am making to make all of that a single paste away.</div>
+                  </div></a></li>
+            </ul>
+          </div>
+        </div>
+        <!---->
+        <!--h3 Stalk me:-->
+        <!--ul-->
+        <!--	li-->
+        <!--		a(href='http://twitter.com/jonnyscholes') Twitter-->
+        <!--	li-->
+        <!--		a(href='http://www.flickr.com/jonnyscholes') Flickr-->
+        <!--	li-->
+        <!--		a(href='http://github.com/jonnyscholes') Github-->
+        <!---->
+        <!---->
+        <!--footer © 2014 Jonny-->
+      </article>
+    </div>
+    <script src="plugins.js"></script>
+    <!--script(src='headtrackr.js')-->
+    <script src="global.js"></script>
   </body>
 </html>

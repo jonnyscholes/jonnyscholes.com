@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../bbc-papers/.idea/bbc-papers.iml" filepath="$PROJECT_DIR$/../bbc-papers/.idea/bbc-papers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../curriculus/.idea/curriculus.iml" filepath="$PROJECT_DIR$/../curriculus/.idea/curriculus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jonnyscholes.com.iml" filepath="$PROJECT_DIR$/.idea/jonnyscholes.com.iml" />
+    </modules>
+  </component>
+</project>
+

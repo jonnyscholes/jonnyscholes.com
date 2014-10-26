@@ -116,7 +116,7 @@ gulp.task('connect', function() {
   connect.server({
     root: build,
     livereload: true,
-    port: 9090
+    port: 9100
   });
 });
 

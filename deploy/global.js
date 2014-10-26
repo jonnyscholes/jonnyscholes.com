@@ -2,65 +2,7 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 							  window.webkitRequestAnimationFrame || window.oRequestAnimationFrame;
 
 
-
 (function($){
-//	var picIndex = getRandomInRange(1,10);
-//
-//	var bgPath = 'http://jonnyscholes.com/images/'+picIndex+'.jpg',
-//		rawStage = $('#stage')[0],
-//		stageCtx = rawStage.getContext('2d');
-//
-//	$('#stage').height($(window).height()).width($(window).width());
-//
-//
-//	var bgData = new Image();
-//	bgData.src = bgPath;
-//
-//	bgData.onload = function(){
-//		stageCtx.drawImage(bgData, 0, 0, rawStage.width, rawStage.height);
-//		start();
-//	};
-//
-//	function start(){
-//		$('body').mousemove(function (e){
-//			new Mole(stageCtx, e.pageX, e.pageY);
-//		});
-//	}
-//
-//	var Mole = function (stage, x, y){
-//		var size = getRandomInRange(1,1);
-//		stage.drawImage(rawStage, 0, y, rawStage.width, size, 0, getRandomInRange(0,rawStage.height), rawStage.width, size);
-//	};
-//	var videoInput = document.getElementById('inputVideo');
-//	var canvasInput = document.getElementById('inputCanvas');
-//	var htracker = new headtrackr.Tracker(
-//		{
-//			ui: false
-//		}
-//	);
-//
-//	htracker.init(videoInput, canvasInput);
-//	htracker.start();
-//
-//	var $strips = $('.strip .bg');
-//
-//	var wy = $('#inputVideo').height();
-//	var wx = $('#inputVideo').width();
-//
-//	document.addEventListener('facetrackingEvent',
-//		function (event) {
-//			var yp = (event.y / wy  * 100);
-//			var xp = (event.x / wx  * 100);
-//			$strips.css('transform', 'translateY('+yp*0.3+'%) translateX(-'+xp*0.3+'%)');
-//		}
-//	);
-//
-//	document.addEventListener('headtrackingEvent',
-//		function (event) {
-//			var scale = 1 - event.z / 100;
-//			$container.css('transform', 'translateY(-50%) translateX(-50%) scale('+scale+')');
-//		}
-//	);
 	var app = app || {};
 	var $movers = $('.paralax .item');
 	var ratelimit = 30;
@@ -76,7 +18,7 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			var currentCtx = $currentCanvas[0].getContext('2d');
 
 			var bgData = new Image();
-			bgData.src = 'http://localhost:9100'+canvasImages[i];
+			bgData.src = 'http://jonnyscholes.com'+canvasImages[i];
 
 			fitToContainer($currentCanvas[0]);
 
@@ -139,47 +81,6 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 	app.pictureMoles();
 	app.morphingMass();
 
-//	var $navItems = $('.primary-navigation a');
-//	var $contentZones = $('.page-contain .page-content');
-//	var $closeLinks = $contentZones.find('.close');
-//
-//	$navItems.click(function(e){
-//		$contentZones.removeClass('active').addClass('inactive');
-//		$contentZones.eq($(this).parent().index()).addClass('active').removeClass('inactive');
-//		e.preventDefault();
-//	});
-//
-//	$closeLinks.click(function(e){
-//		$contentZones.removeClass('active').addClass('inactive');
-//		e.preventDefault();
-//	});
-
-
-//	function startRender(ctx, canvas){
-//		$('body').mousemove(function (e){
-//			mole(ctx, canvas);
-//		});
-//
-//		function tick(timestamp) {
-//			currentFrame++;
-//			if(currentFrame === ratelimit) {
-//				render();
-//				currentFrame = 0
-//			}
-//			window.requestAnimationFrame(tick);
-//		}
-//	}
-//
-//	function mole(stage, can){
-//		var size = getRandomInRange(1,1);
-//		var y = getRandomInRange(1,can.height);
-//		stage.drawImage(can, 0, y, can.width, size, 0, getRandomInRange(0,can.height), can.width, size);
-//
-//		window.requestAnimationFrame(function(){ mole(stage, can); });
-//	}
-//
-//	window.requestAnimationFrame(tick);
-
 }(jQuery));
 
 
@@ -189,8 +90,8 @@ function getRandomInRange(from, to) {
 }
 
 function fitToContainer(canvas){
-  canvas.style.width='100%';
-  canvas.style.height='100%';
-  canvas.width  = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
+	canvas.style.width='100%';
+	canvas.style.height='100%';
+	canvas.width  = canvas.offsetWidth;
+	canvas.height = canvas.offsetHeight;
 }

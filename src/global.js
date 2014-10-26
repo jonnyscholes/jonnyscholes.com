@@ -18,7 +18,7 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			var currentCtx = $currentCanvas[0].getContext('2d');
 
 			var bgData = new Image();
-			bgData.src = 'http://localhost:9100'+canvasImages[i];
+			bgData.src = 'http://jonnyscholes.com'+canvasImages[i];
 
 			fitToContainer($currentCanvas[0]);
 

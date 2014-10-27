@@ -74,18 +74,23 @@ gulp.task('templates', function() {
     .pipe(gulp.dest(build));
 });
 
+var autoprefixer = require('gulp-autoprefixer');
 
 // Styles
 // @todo: add minification option
 gulp.task('styles', function () {
- return gulp.src(src + '**/*.scss')
-   .pipe(sass({
-     outputStyle: 'expanded',
-     errLogToConsole: true,
-	 sourceComments: 'map',
-	sourceMap: 'sass'
-   })).on('error', gutil.log)
-   .pipe(gulp.dest(build));
+	return gulp.src(src + '**/*.scss')
+		.pipe(sass({
+			outputStyle: 'expanded',
+			errLogToConsole: true,
+			sourceComments: 'map',
+			sourceMap: 'sass'
+		})).on('error', gutil.log)
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest(build));
 });
 
 

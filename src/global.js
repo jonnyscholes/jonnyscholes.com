@@ -9,23 +9,45 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 	var currentFrame = ratelimit-1;
 	var isAnimationMode = true;
 
-	app.pictureMoles = function() {
-		var canvasImages = ['/images/stripe1.jpg','/images/stripe2.jpg','/images/stripe3.jpg','/images/stripe4.jpg','/images/stripe5.jpg'];
+	$(document).ready(function(){
+		app.loadPictures(function(images){
+			app.pictureMoles(images);
+			$('body').removeClass('is-loading').addClass('has-loaded');
+		});
+		app.morphingMass();
+	});
 
+	app.loadPictures = function(callback) {
+		var canvasImages = ['/images/stripe1.jpg','/images/stripe2.jpg','/images/stripe3.jpg','/images/stripe4.jpg','/images/stripe5.jpg'];
+		var loadedImages = 0;
+		var imageArray = [];
+
+		$(canvasImages).each(function(i, imgPath){
+			var bgData = new Image();
+			bgData.src = 'http://jonnyscholes.com'+imgPath;
+
+			bgData.onload = function(){
+				imageArray.push(bgData);
+				loadedImages++;
+
+				if(loadedImages === canvasImages.length){
+					callback(imageArray);
+				}
+			};
+		});
+	};
+
+	app.pictureMoles = function(imageArray) {
 		var $canvasHolders = $('.top li');
+
 		$canvasHolders.each(function(i, elm){
 			var $currentCanvas = $(elm).find('canvas');
 			var currentCtx = $currentCanvas[0].getContext('2d');
 
-			var bgData = new Image();
-			bgData.src = 'http://jonnyscholes.com'+canvasImages[i];
-
 			fitToContainer($currentCanvas[0]);
 
-			bgData.onload = function(){
-				currentCtx.drawImage(bgData, 0, 0, $currentCanvas[0].width, $currentCanvas[0].height);
-				startRender(currentCtx, $currentCanvas[0]);
-			};
+			currentCtx.drawImage(imageArray[i], 0, 0, $currentCanvas[0].width, $currentCanvas[0].height);
+			startRender(currentCtx, $currentCanvas[0]);
 		});
 
 		function startRender(ctx, canvas){
@@ -76,10 +98,6 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			$movers.eq(8).css('transform', 'translateY(' + getRandomInRange(1, 5) + '%) translateX(' + getRandomInRange(1, 5) + '%)');
 		}
 	};
-
-
-	app.pictureMoles();
-	app.morphingMass();
 
 }(jQuery));
 

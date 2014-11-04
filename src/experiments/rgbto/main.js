@@ -152,7 +152,7 @@ var WCAGColorContrast = {
 				$message.text(contrastText);
 				$contrast.css({'color': '#'+currentColor, 'background': '#'+wcagBackground});
 				$infoContainer.removeClass('light-theme, dark-theme').addClass(darkOrLight(hexToRgb(hex)));
-				$sass.text('$' + ntc.name(hex)[1].toLowerCase().replace(' ', '') + ': ' + hex.toUpperCase());
+				$sass.text('$' + ntc.name(hex)[1].toLowerCase().replace(' ', '') + ': ' + hex.toUpperCase()+';');
 			}
 		}
 

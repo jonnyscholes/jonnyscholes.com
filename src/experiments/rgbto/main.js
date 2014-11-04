@@ -94,6 +94,7 @@ var WCAGColorContrast = {
 		var $message = $('.message');
 		var $contrast = $('.contrast-example');
 		var $colorList = $('.color-list');
+		var $charcount = $('.char-count');
 
 		var wcagBackground = 'ffffff';
 		var storageKey = 'rgbto-colors';
@@ -103,20 +104,19 @@ var WCAGColorContrast = {
 //		$input.val('#' + rgbToHex(intToRgb(getRandomInRange(1, 16777216))));
 
 		ntc.init();
-//        store.clear();
 
 		checkAndupdate($input.val());
-        updateColorStore();
+		updateColorStore();
 
 		$input.on('change paste keyup', function () {
 			checkAndupdate($(this).val());
 		});
 
-        $(document).on('click', '.color-list a', function(e) {
-            $input.val($(this).data('color'));
-            $input.change();
-            e.preventDefault();
-        });
+		$(document).on('click', '.color-list a', function(e) {
+			$input.val($(this).data('color'));
+			$input.change();
+			e.preventDefault();
+		});
 
 		function checkAndupdate(value) {
 			var validColor = validColorProps(value);
@@ -126,21 +126,21 @@ var WCAGColorContrast = {
 			}
 
 			if (validColor) {
-				$container.css('background', validColor.string);
 				var hex;
 				var rgb;
+				var colorStr;
 
 				switch (validColor.type) {
 					// @todo: Add cmyk / hsl support
 					case 'rgb':
 						rgb = validColor.string;
 						hex = '#' + rgbToHex(validColor.raw);
-						$opposite.text(hex);
+						colorStr = hex;
 						break;
 					case 'hex':
 						rgb = hexToRgb(validColor.raw, true);
 						hex = validColor.string;
-						$opposite.text(rgb);
+						colorStr = rgb;
 						break;
 				}
 
@@ -149,11 +149,18 @@ var WCAGColorContrast = {
 
 				var contrastText = WCAGColorContrast.ratio(currentColor, wcagBackground) >= 7 ? 'WCAG Pass' : 'WCAG Fail';
 
+				// Content
+				$opposite.text(colorStr);
+				$sass.text('$' + ntc.name(hex)[1].toLowerCase().replace(' ', '') + ': ' + hex.toUpperCase()+';');
 				$message.text(contrastText);
 				$contrast.css({'color': '#'+currentColor, 'background': '#'+wcagBackground});
+
+				// Style
+				$container.css('background', validColor.string);
 				$infoContainer.removeClass('light-theme, dark-theme').addClass(darkOrLight(hexToRgb(hex)));
-				$sass.text('$' + ntc.name(hex)[1].toLowerCase().replace(' ', '') + ': ' + hex.toUpperCase()+';');
 			}
+
+			$charcount.text('chars: '+value.length+' words: '+value.split(' ').length);
 		}
 
 		function updateColorStore(newColor) {
@@ -165,7 +172,7 @@ var WCAGColorContrast = {
 				if(newColor && colorList.indexOf(newColor) === -1) {
 					colorList.push(newColor);
 				}
-                store.set(storageKey, JSON.stringify(colorList));
+				store.set(storageKey, JSON.stringify(colorList));
 				updateColorListHtml(colorList);
 			} else {
 				store.set(storageKey, JSON.stringify([newColor]));
@@ -187,7 +194,7 @@ var WCAGColorContrast = {
 
 	function validColorProps(value) {
 		if (value.indexOf(',') !== -1) {
-			var rgb = value.trim().replace(/rgba?\(/, '').replace(')', '').split(',').filter(Boolean);
+			var rgb = value.trim().replace(/rgba?\(/, '').replace(')', '').split(',').filter(hasValue).filter(le255);
 			switch (true) {
 				// Support r:106 g:6 b:106
 				case rgb.length == 3:
@@ -197,6 +204,9 @@ var WCAGColorContrast = {
 						type: 'rgb'
 					};
 				case rgb.length == 4:
+					if(rgb[3] > 1){
+						return false;
+					}
 					return {
 						string: 'rgba(' + rgb.join(',') + ')',
 						raw: rgb,
@@ -207,7 +217,9 @@ var WCAGColorContrast = {
 			}
 		} else {
 			var hex = value.trim().replace('#', '');
-			if (hex.length == 3 || hex.length == 6) {
+			var validChars = 'abcedf0123456789';
+
+			if ((hex.length == 3 || hex.length == 6) && containsOnlyChars(validChars, hex)) {
 				return {
 					string: '#' + hex,
 					raw: hex,
@@ -216,6 +228,24 @@ var WCAGColorContrast = {
 			}
 			return false;
 		}
+	}
+
+	function le255(number) {
+		return number <= 255;
+	}
+
+	function hasValue(string) {
+		return string.replace(new RegExp(/\s/g), '').length > 0;
+	}
+
+	function containsOnlyChars(needles, stack) {
+		for (var i = 0; i < needles.length; i++) {
+			stack = stack.replace(new RegExp(needles[i], 'g'), '');
+			if(stack.length === 0) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	function hexToRgb(hex, asString) {

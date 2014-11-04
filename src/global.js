@@ -73,6 +73,19 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			e.preventDefault();
 		});
 
+
+		// @todo: Make render take a magnitude from, to - on hover make the movement more pronounced
+		$entryLink.hover(
+			function hoverIn(){
+				ratelimit = 10;
+				currentFrame = 0;
+			},
+			function hoverOut(){
+				ratelimit = 30;
+				currentFrame = 0;
+			}
+		);
+
 		window.requestAnimationFrame(tick);
 
 		function tick(timestamp) {

@@ -4,100 +4,79 @@ body {
 	padding: 0;
 	margin: 0;
 	text-align: center;
-    background-color: #fff;
-    background-image: 
-      linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), 
-      linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-    background-size:60px 60px;
-    background-position:0 0, 30px 30px;
+	background-color: #fff;
+	background-image:
+	  linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+	  linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+	background-size:60px 60px;
+	background-position:0 0, 30px 30px;
 	font-family: 'Source Code Pro', serif;
 }
 
 .container {
-  transition: background 300ms linear;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.color {
-	box-shadow: 0px 0px 50px 0px black;
-	 border-radius: 5px;
-	overflow: hidden;
-  text-align: center;
-  border: 0 none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-	li {
-		position: relative;
-	}
-}
-  
-  .colorlabel,
-  .colorinput {
-    display: block;
-  }
-  
-  .colorinput {
-    border: 0 none;
-    padding: 20px 20px 20px 20px;
-	text-align: center;
-  }
-  
-  .colorlabel {
+	transition: background 300ms linear;
+	background: #fff;
 	position: absolute;
-	bottom: 10px;
+	top: 0;
 	left: 0;
 	width: 100%;
-	text-align: center;
-  }
-  
-  .other {
-	  transition: all 300ms linear;
-	  font-size: 2em;
-	  position: absolute;
-	  width: 100%;
-	  bottom: 20%;
-	  text-align: center;
+	height: 100%;
+}
 
-	  &.light-theme {
-		color: white;
-	  }
-	  &.dark-theme {
-		color: black;
-	  }
-
-	  opacity: 0;
-
-	  .has-color & {
-		opacity: 1;
-	  }
-  }
-  	.sass,
-	.opposite,
-	.message {
-		opacity: 0.7;
+	.color {
+		box-shadow: 0px 0px 50px 0px black;
+		border-radius: 5px;
+		overflow: hidden;
+		text-align: center;
+		border: 0 none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
 	}
-  	.opposite {
-		text-transform: uppercase;
+		.colorinput {
+			display: block;
+			border: 0 none;
+			padding: 20px 20px 20px 20px;
+			text-align: center;
+		}
+
+	.other {
+		transition: all 300ms linear;
+		opacity: 0;
+		font-size: 2em;
+		position: absolute;
+		width: 100%;
+		bottom: 100px;
+		text-align: center;
+		&.light-theme {
+			color: white;
+		}
+		&.dark-theme {
+			color: black;
+		}
+		.has-color & {
+			opacity: 1;
+		}
 	}
 
-    .color-list {
-      text-align: center;
-      a {
-        display: inline-block;
-        list-style: none;
-        height: 20px;
-        width: 20px;
-      }
-    }
+		.sass,
+		.opposite,
+		.message,
+		.char-count {
+			opacity: 0.7;
+		}
+
+		.opposite {
+			text-transform: uppercase;
+		}
+
+		.color-list {
+			text-align: center;
+			a {
+				display: inline-block;
+				list-style: none;
+				height: 20px;
+				width: 20px;
+			}
+		}

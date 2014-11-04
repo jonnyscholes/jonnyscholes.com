@@ -118,6 +118,13 @@ var WCAGColorContrast = {
 			e.preventDefault();
 		});
 
+		$contrast.click(function(e){
+			if(currentColor){
+				wcagBackground = currentColor;
+				$contrast.css({'background': '#'+wcagBackground});
+			}
+		});
+
 		function checkAndupdate(value) {
 			var validColor = validColorProps(value);
 

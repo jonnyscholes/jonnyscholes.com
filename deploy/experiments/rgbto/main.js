@@ -224,7 +224,7 @@ var WCAGColorContrast = {
 			}
 		} else {
 			var hex = value.trim().replace('#', '');
-			var validChars = 'abcedf0123456789';
+			var validChars = 'abcedfABCDEF0123456789';
 
 			if ((hex.length == 3 || hex.length == 6) && containsOnlyChars(validChars, hex)) {
 				return {

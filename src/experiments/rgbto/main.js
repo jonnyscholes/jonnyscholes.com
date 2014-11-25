@@ -137,6 +137,8 @@ var WCAGColorContrast = {
 				var rgb;
 				var colorStr;
 
+				console.log(validColor);
+
 				switch (validColor.type) {
 					// @todo: Add cmyk / hsl support
 					case 'rgb':
@@ -200,7 +202,11 @@ var WCAGColorContrast = {
 
 
 	function validColorProps(value) {
+
 		if (value.indexOf(',') !== -1) {
+			// support rgb(0,0,0);
+			// support rgba(0,0,0,0);
+
 			var rgb = value.trim().replace(/rgba?\(/, '').replace(')', '').split(',').filter(hasValue).filter(le255);
 			switch (true) {
 				// Support r:106 g:6 b:106
@@ -211,7 +217,7 @@ var WCAGColorContrast = {
 						type: 'rgb'
 					};
 				case rgb.length == 4:
-					if(rgb[3] > 1){
+					if (rgb[3] > 1) {
 						return false;
 					}
 					return {
@@ -222,7 +228,28 @@ var WCAGColorContrast = {
 				default:
 					return false;
 			}
+		} else if (value.indexOf('R') !== -1) {
+			// support R:252 G:252 B:252
+			// support (R145 / G145 / B149)
+
+			var rgb = value.replace(/:/g, '')
+				.replace(/\(/g, '')
+				.replace(/\)/g, '')
+				.replace(/\//g, '')
+				.replace(/ /g, '')
+				.toLowerCase()
+				.split(/r|g|b/)
+				.filter(function(elm) { return elm.length > 0; })
+
+			return {
+				string: 'rgb(' + rgb.join(',') + ')',
+				raw: rgb,
+				type: 'rgb'
+			};
 		} else {
+			// support #000000
+			// support #000
+
 			var hex = value.trim().replace('#', '');
 			var validChars = 'abcedfABCDEF0123456789';
 

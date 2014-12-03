@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(content='IE=edge', http-equiv='X-UA-Compatible')
+		title Mashup 1
+		meta(content='width=device-width, initial-scale=1', name='viewport')
+		script(src="//use.typekit.net/fgl4gvs.js")
+		script.
+			try{Typekit.load();}catch(e){}
+		link(href='main.css', rel='stylesheet')
+
+	mixin section(imageurl, size, text)
+		.container(data-size=size)
+			img(src=imageurl)
+			.makefix
+				h1=text
+				.bg(style="background-image: url("+imageurl+");")
+
+	body
+		- var text = "This is what we do"
+		+section("https://farm9.staticflickr.com/8136/15210027043_f3d6080fe7_h.jpg", 70, text)
+		+section("https://farm8.staticflickr.com/7545/15640464208_c6a948ed57_h.jpg", 70, text)
+		+section("https://farm6.staticflickr.com/5606/15830930242_823a155fc8_h.jpg", 70, text)
+		+section("https://farm6.staticflickr.com/5604/15209466444_2b467b915b_h.jpg", 70, text)
+		+section("https://farm8.staticflickr.com/7494/15643630809_1c8de8f0a7_h.jpg", 70, text)
+		+section("https://farm6.staticflickr.com/5615/15829658681_73373c13f5_h.jpg", 70, text)
+		+section("https://farm8.staticflickr.com/7514/15644300877_97f865585f_h.jpg", 70, text)
+		+section("https://farm8.staticflickr.com/7469/15210040803_687f6859ab_h.jpg", 70, text)
+		+section("https://farm6.staticflickr.com/5606/15645469418_5f62814fe9_h.jpg", 70, text)
+
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+		script(src="main.js")
+		//script.
+		//	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-12958212-7', 'auto');ga('send', 'pageview');

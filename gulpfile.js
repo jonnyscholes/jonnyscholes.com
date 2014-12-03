@@ -82,7 +82,6 @@ gulp.task('styles', function () {
 	return gulp.src(src + '**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
-			errLogToConsole: true,
 			sourceComments: 'map',
 			sourceMap: 'sass'
 		})).on('error', gutil.log)

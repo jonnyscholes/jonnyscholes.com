@@ -1,0 +1,77 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+.container {
+	&.has-fixed {
+		.makefix {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	$size: 70px;
+
+	@for $i from 1 through 12 {
+		&:nth-child(#{$i}) {
+			.makefix {
+				top: ($i - 1) * $size;
+				h1 {
+					top: -(($i - 1) * $size);
+				}
+			}
+		}
+	}
+
+	&:nth-child(even) {
+		.makefix {
+			h1 {
+//				left: 5px;
+			}
+		}
+	}
+}
+
+.makefix {
+	transform: translateY(-100%);
+	transition: all 300ms ease-in-out;
+	position: fixed;
+	opacity: 0;
+	height: 70px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	h1 {
+//		text-shadow: 0px 0px 5px rgba(black, .5);
+		font-family: "ff-basic-gothic-sc-web-pro";
+		font-weight: 100;
+		opacity: 0.9;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		color: black;
+		font-size: 17.5em;
+		text-transform: uppercase;
+		line-height: 1;
+		margin: 0;
+		text-align: center;
+	}
+	.bg {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-size: 100%;
+		background-position: bottom center;
+	}
+}

@@ -79,7 +79,7 @@ var autoprefixer = require('gulp-autoprefixer');
 // Styles
 // @todo: add minification option
 gulp.task('styles', function () {
-	return gulp.src(src + '**/*.scss')
+	return gulp.src([src + '**/*.scss',  '!'+src+'scss/*'])
 		.pipe(sass({
 			outputStyle: 'expanded',
 			sourceComments: 'map',

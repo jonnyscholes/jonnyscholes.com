@@ -1,0 +1,125 @@
+/* line 2, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+html, body {
+  padding: 0;
+  margin: 0; }
+
+/* line 7, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+img {
+  display: block;
+  width: 100%; }
+
+/* line 14, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container.has-fixed .makefix {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(1) .makefix {
+  top: 0px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(1) .makefix h1 {
+    top: 0px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(2) .makefix {
+  top: 70px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(2) .makefix h1 {
+    top: -70px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(3) .makefix {
+  top: 140px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(3) .makefix h1 {
+    top: -140px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(4) .makefix {
+  top: 210px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(4) .makefix h1 {
+    top: -210px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(5) .makefix {
+  top: 280px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(5) .makefix h1 {
+    top: -280px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(6) .makefix {
+  top: 350px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(6) .makefix h1 {
+    top: -350px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(7) .makefix {
+  top: 420px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(7) .makefix h1 {
+    top: -420px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(8) .makefix {
+  top: 490px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(8) .makefix h1 {
+    top: -490px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(9) .makefix {
+  top: 560px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(9) .makefix h1 {
+    top: -560px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(10) .makefix {
+  top: 630px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(10) .makefix h1 {
+    top: -630px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(11) .makefix {
+  top: 700px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(11) .makefix h1 {
+    top: -700px; }
+/* line 24, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.container:nth-child(12) .makefix {
+  top: 770px; }
+  /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .container:nth-child(12) .makefix h1 {
+    top: -770px; }
+
+/* line 42, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+.makefix {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: all 300ms ease-in-out;
+  position: fixed;
+  opacity: 0;
+  height: 70px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+  /* line 52, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .makefix h1 {
+    font-family: "ff-basic-gothic-sc-web-pro";
+    font-weight: 100;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    color: black;
+    font-size: 17.5em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    text-align: center; }
+  /* line 67, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mashup-1/main.scss */
+  .makefix .bg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: bottom center; }
+

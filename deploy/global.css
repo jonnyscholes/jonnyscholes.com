@@ -1,10 +1,12 @@
 @-webkit-keyframes fadein {
+  /* line 4, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
     opacity: 0;
     z-index: 200;
     -webkit-transform: scale(2);
     transform: scale(2); }
 
+  /* line 9, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
     opacity: 1;
     z-index: 200;
@@ -12,12 +14,14 @@
     transform: scale(1); } }
 
 @keyframes fadein {
+  /* line 4, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
     opacity: 0;
     z-index: 200;
     -webkit-transform: scale(2);
     transform: scale(2); }
 
+  /* line 9, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
     opacity: 1;
     z-index: 200;
@@ -25,159 +29,327 @@
     transform: scale(1); } }
 
 @-webkit-keyframes fadeout {
+  /* line 17, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
     opacity: 1;
     z-index: 200; }
 
+  /* line 21, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   99% {
     opacity: 0;
     z-index: 200; }
 
+  /* line 25, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
     opacity: 0;
     z-index: 1; } }
 
 @keyframes fadeout {
+  /* line 17, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
     opacity: 1;
     z-index: 200; }
 
+  /* line 21, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   99% {
     opacity: 0;
     z-index: 200; }
 
+  /* line 25, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
     opacity: 0;
     z-index: 1; } }
 
 @-webkit-keyframes slide-left {
+  /* line 32, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
-    -webkit-transform: translateX(0) scale(0.8);
-    transform: translateX(0) scale(0.8); }
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
 
+  /* line 35, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   50% {
     -webkit-transform: translateX(-50%) scale(1);
     transform: translateX(-50%) scale(1); }
 
+  /* line 38, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
-    -webkit-transform: translateX(-100%) scale(0.8);
-    transform: translateX(-100%) scale(0.8); } }
+    -webkit-transform: translateX(-100%) scale(.8);
+    transform: translateX(-100%) scale(.8); } }
 
 @keyframes slide-left {
+  /* line 32, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
-    -webkit-transform: translateX(0) scale(0.8);
-    transform: translateX(0) scale(0.8); }
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
 
+  /* line 35, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   50% {
     -webkit-transform: translateX(-50%) scale(1);
     transform: translateX(-50%) scale(1); }
 
+  /* line 38, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
-    -webkit-transform: translateX(-100%) scale(0.8);
-    transform: translateX(-100%) scale(0.8); } }
+    -webkit-transform: translateX(-100%) scale(.8);
+    transform: translateX(-100%) scale(.8); } }
 
 @-webkit-keyframes slide-right {
+  /* line 44, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
-    -webkit-transform: translateX(0) scale(0.8);
-    transform: translateX(0) scale(0.8); }
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
 
+  /* line 47, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   50% {
     -webkit-transform: translateX(50%) scale(1);
     transform: translateX(50%) scale(1); }
 
+  /* line 50, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
-    -webkit-transform: translateX(100%) scale(0.8);
-    transform: translateX(100%) scale(0.8); } }
+    -webkit-transform: translateX(100%) scale(.8);
+    transform: translateX(100%) scale(.8); } }
 
 @keyframes slide-right {
+  /* line 44, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   0% {
-    -webkit-transform: translateX(0) scale(0.8);
-    transform: translateX(0) scale(0.8); }
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
 
+  /* line 47, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   50% {
     -webkit-transform: translateX(50%) scale(1);
     transform: translateX(50%) scale(1); }
 
+  /* line 50, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
   100% {
-    -webkit-transform: translateX(100%) scale(0.8);
-    transform: translateX(100%) scale(0.8); } }
+    -webkit-transform: translateX(100%) scale(.8);
+    transform: translateX(100%) scale(.8); } }
 
-html {
-  height: 100%; }
+/* line 57, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+*, *:before, *:after {
+  box-sizing: border-box; }
 
-body {
-  margin: 0;
-  height: 100%;
-  color: #fff;
-  font-family: 'Helvetica', sans-serif;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-  line-height: 1.5em; }
-
-.has-loaded .loading-pane {
-  -webkit-animation: fadeout 800ms 1 forwards;
-  animation: fadeout 800ms 1 forwards; }
-
-.loading-pane {
-  top: 0;
-  left: 0;
+/* line 1, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+.paralax {
+  transition: all 500ms linear;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
   position: absolute;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 200;
+  left: 50%;
+  top: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+  width: 500px;
+  height: 500px;
+  z-index: 10;
+  border-radius: 100%; }
+  /* line 14, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+  .paralax .strip {
+    width: 25%;
+    height: 25%;
+    float: left;
+    position: relative;
+    overflow: hidden; }
+  /* line 22, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+  .paralax .bg {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: -100%;
+    left: -100%; }
+  /* line 30, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+  .paralax .item {
+    transition: all 1100ms linear;
+    position: absolute; }
+    /* line 34, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:before {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 3%;
+      box-shadow: 0px 0px 10px 0px #000;
+      background: black;
+      bottom: -36px;
+      left: 0px;
+      opacity: 0.1;
+      border-radius: 100%; }
+    /* line 46, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(1) {
+      left: -5px;
+      top: 144px; }
+    /* line 50, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(2) {
+      left: 0;
+      top: 57px; }
+      /* line 53, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+      .paralax .item:nth-child(2):before {
+        bottom: -250px; }
+    /* line 57, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(3) {
+      right: 0;
+      top: 114px; }
+    /* line 61, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(4) {
+      left: 21px;
+      top: 284px; }
+    /* line 65, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(5) {
+      left: 39px;
+      top: -91px; }
+      /* line 68, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+      .paralax .item:nth-child(5):before {
+        bottom: -200px; }
+    /* line 72, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(6) {
+      left: 9px;
+      top: 95px; }
+    /* line 76, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(7) {
+      left: 0px;
+      top: 135px; }
+      /* line 79, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+      .paralax .item:nth-child(7):before {
+        bottom: -150px; }
+    /* line 83, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(8) {
+      right: 50px;
+      top: 314px; }
+    /* line 87, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax .item:nth-child(9) {
+      right: 0px;
+      top: 167px; }
+  /* line 93, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+  .paralax.is-exploded {
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 100%; }
+    /* line 101, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(1) {
+      left: -20px;
+      top: calc(100% - 346px); }
+    /* line 105, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(2) {
+      left: -30px;
+      top: -65px; }
+    /* line 109, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(3) {
+      right: -20px;
+      top: calc(100% - 340px); }
+    /* line 113, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(4) {
+      left: -70px;
+      top: calc(100% - 300px);
+      -webkit-transform: rotate(33deg) !important;
+      transform: rotate(33deg) !important; }
+    /* line 122, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(5) {
+      top: calc(0% - 177px);
+      left: calc(100% - 308px); }
+    /* line 126, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(6) {
+      left: -30px;
+      top: 198px; }
+    /* line 130, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(7) {
+      left: -24px;
+      top: 57px;
+      -webkit-transform: rotate(40deg) !important;
+      transform: rotate(40deg) !important; }
+    /* line 135, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(8) {
+      right: -16px;
+      top: 314px; }
+    /* line 139, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_paralax.scss */
+    .paralax.is-exploded .item:nth-child(9) {
+      right: 0px;
+      top: 167px; }
+
+/* line 1, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_project-list.scss */
+.project-list {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  /* line 7, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_project-list.scss */
+  .project-list--item {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    clear: right; }
+  /* line 13, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_project-list.scss */
+  .project-list a {
+    display: block;
+    text-decoration: none; }
+  /* line 17, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_project-list.scss */
+  .project-list--item-meta {
+    color: black;
+    overflow: hidden; }
+  /* line 21, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_project-list.scss */
+  .project-list--item-thumb {
+    width: 100%;
+    height: auto; }
+
+/* line 1, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+.moler {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   width: 100%;
   height: 100%;
-  background: black; }
-  .loading-pane--title {
-    font-family: 'Cinzel', serif;
-    color: #fff;
-    font-size: 60px;
-    margin-bottom: 20px; }
-  .loading-pane--status {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+  -webkit-perspective: 700px;
+  perspective: 700px;
+  z-index: 2;
+  top: 0;
+  left: 0; }
+  /* line 12, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+  .moler--single {
     position: relative;
-    width: 100px;
-    height: 50px;
-    background: linear-gradient(to bottom, white 100%, #ffffff) no-repeat;
-    background-size: 2px 200px;
-    background-position: center top; }
-    .loading-pane--status:before, .loading-pane--status:after {
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
+    float: left;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center; }
+    /* line 20, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:nth-child(1) {
+      background: rgba(212, 159, 79, 0.5); }
+    /* line 23, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:nth-child(2) {
+      background: rgba(123, 144, 113, 0.5); }
+    /* line 26, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:nth-child(3) {
+      background: rgba(168, 95, 52, 0.5); }
+    /* line 29, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:nth-child(4) {
+      background: rgba(125, 135, 142, 0.5); }
+    /* line 32, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:nth-child(5) {
+      background: rgba(57, 57, 57, 0.5); }
+    /* line 35, /Users/jonny/Projects/Me/jonnyscholes.com/src/scss/_moler.scss */
+    .moler--single:before {
       content: '';
-      top: 0;
-      width: 50px;
-      height: 50px;
       position: absolute;
-      -webkit-transform-origin: center center;
-      transform-origin: center center; }
-    .loading-pane--status:before {
-      -webkit-animation: slide-right 1s infinite alternate ease-in-out;
-      animation: slide-right 1s infinite alternate ease-in-out;
+      top: 0;
       left: 0;
-      height: 45px;
-      top: 5px;
-      background: linear-gradient(to bottom, transparent, transparent 5px, white 5px, #ffffff);
-      background-size: 100% 10px; }
-    .loading-pane--status:after {
-      -webkit-animation: slide-left 1s infinite alternate ease-in-out;
-      animation: slide-left 1s infinite alternate ease-in-out;
-      right: 0;
-      background: linear-gradient(to bottom, transparent, transparent 5px, white 5px, #ffffff);
-      background-size: 100% 10px; }
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
+      /* W3C */ }
 
+/* line 343, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+body {
+  margin: 0px;
+  width: 100%;
+  overflow-x: hidden; }
+
+/* line 350, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+h2, h3 {
+  font-family: 'Cinzel', serif; }
+
+/* line 357, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
 .entry {
   transition: all 500ms linear;
   position: absolute;
@@ -190,242 +362,45 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 30px; }
-  .entry.is-active {
-    top: 50px; }
-  .entry:hover {
-    font-size: 32px; }
 
-.paralax {
-  transition: all 500ms linear;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -250px;
-  margin-left: -250px;
-  width: 500px;
-  height: 500px;
-  z-index: 10;
-  border-radius: 100%; }
-  .paralax .strip {
-    width: 25%;
-    height: 25%;
-    float: left;
+/* line 370, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+.container {
+  -webkit-perspective: 0px;
+  perspective: 0px; }
+  /* line 373, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+  .container .top {
     position: relative;
-    overflow: hidden; }
-  .paralax .bg {
-    position: absolute;
-    width: 300%;
-    height: 300%;
-    top: -100%;
-    left: -100%; }
-  .paralax .item {
-    transition: all 1100ms linear;
-    position: absolute; }
-    .paralax .item:before {
-      content: '';
-      position: absolute;
-      width: 80%;
-      height: 3%;
-      box-shadow: 0px 0px 10px 0px #000;
-      background: black;
-      bottom: -36px;
-      left: 0px;
-      opacity: 0.1;
-      border-radius: 100%; }
-    .paralax .item:nth-child(1) {
-      left: -5px;
-      top: 144px; }
-    .paralax .item:nth-child(2) {
-      left: 0;
-      top: 57px; }
-      .paralax .item:nth-child(2):before {
-        bottom: -250px; }
-    .paralax .item:nth-child(3) {
-      right: 0;
-      top: 114px; }
-    .paralax .item:nth-child(4) {
-      left: 21px;
-      top: 284px; }
-    .paralax .item:nth-child(5) {
-      left: 39px;
-      top: -91px; }
-      .paralax .item:nth-child(5):before {
-        bottom: -200px; }
-    .paralax .item:nth-child(6) {
-      left: 9px;
-      top: 95px; }
-    .paralax .item:nth-child(7) {
-      left: 0px;
-      top: 135px; }
-      .paralax .item:nth-child(7):before {
-        bottom: -150px; }
-    .paralax .item:nth-child(8) {
-      right: 50px;
-      top: 314px; }
-    .paralax .item:nth-child(9) {
-      right: 0px;
-      top: 167px; }
-  .paralax.is-exploded {
-    left: 0;
-    top: 0;
-    margin-top: 0;
-    margin-left: 0;
-    width: 100%;
-    height: 100%; }
-    .paralax.is-exploded .item:nth-child(1) {
-      left: -20px;
-      top: calc(100% - 346px); }
-    .paralax.is-exploded .item:nth-child(2) {
-      left: -30px;
-      top: -65px; }
-    .paralax.is-exploded .item:nth-child(3) {
-      right: -20px;
-      top: calc(100% - 340px); }
-    .paralax.is-exploded .item:nth-child(4) {
-      left: -70px;
-      top: calc(100% - 300px);
-      -webkit-transform: rotate(33deg) !important;
-      transform: rotate(33deg) !important; }
-    .paralax.is-exploded .item:nth-child(5) {
-      top: calc(0% - 177px);
-      left: calc(100% - 308px); }
-    .paralax.is-exploded .item:nth-child(6) {
-      left: -30px;
-      top: 198px; }
-    .paralax.is-exploded .item:nth-child(7) {
-      left: -24px;
-      top: 57px;
-      -webkit-transform: rotate(40deg) !important;
-      transform: rotate(40deg) !important; }
-    .paralax.is-exploded .item:nth-child(8) {
-      right: -16px;
-      top: 314px; }
-    .paralax.is-exploded .item:nth-child(9) {
-      right: 0px;
-      top: 167px; }
-
-.stripes {
-  width: 100%;
-  -webkit-perspective: 700px;
-  perspective: 700px;
-  position: absolute;
-  height: 50%;
-  z-index: 2; }
-  .stripes ul {
-    padding: 0;
-    margin: 0;
-    list-style: none; }
-  .stripes li {
+    height: calc(100vh - 400px);
+    width: 100vw;
+    margin: 0 auto; }
+  /* line 380, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+  .container .shelf {
     position: relative;
-    float: left;
-    width: 20%;
-    height: 100%; }
-    .stripes li:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 0.5, 0, -0.00167, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 0.5, 0, -0.00167, 0, 0, 1, 0, 0, 0, 0, 1);
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(to right, rgba(212, 159, 79, 0.5) 20%, rgba(123, 144, 113, 0.5) 20%, rgba(123, 144, 113, 0.5) 40%, rgba(168, 95, 52, 0.5) 40%, rgba(168, 95, 52, 0.5) 60%, rgba(125, 135, 142, 0.5) 60%, rgba(125, 135, 142, 0.5) 80%, rgba(57, 57, 57, 0.5) 80%, rgba(57, 57, 57, 0.5)); }
+  /* line 400, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+  .container .bottom {
+    width: 200vw;
+    margin-left: -50vw;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(to right, rgba(212, 159, 79, 0.5) 20%, rgba(123, 144, 113, 0.5) 20%, rgba(123, 144, 113, 0.5) 40%, rgba(168, 95, 52, 0.5) 40%, rgba(168, 95, 52, 0.5) 60%, rgba(125, 135, 142, 0.5) 60%, rgba(125, 135, 142, 0.5) 80%, rgba(57, 57, 57, 0.5) 80%, rgba(57, 57, 57, 0.5)); }
 
-.stripes.top {
-  top: 0;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-  height: 75%; }
-  .stripes.top li {
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center; }
-    .stripes.top li:nth-child(1) {
-      background: rgba(212, 159, 79, 0.5); }
-    .stripes.top li:nth-child(2) {
-      background: rgba(123, 144, 113, 0.5); }
-    .stripes.top li:nth-child(3) {
-      background: rgba(168, 95, 52, 0.5); }
-    .stripes.top li:nth-child(4) {
-      background: rgba(125, 135, 142, 0.5); }
-    .stripes.top li:nth-child(5) {
-      background: rgba(57, 57, 57, 0.5); }
-    .stripes.top li:before {
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
-      /* W3C */ }
-
-.stripes.bottom {
-  top: 75%; }
-  .stripes.bottom ul {
-    -webkit-transform: rotateX(60deg);
-    transform: rotateX(60deg); }
-    .stripes.bottom ul li:nth-child(1) {
-      background: rgba(212, 159, 79, 0.5); }
-    .stripes.bottom ul li:nth-child(2) {
-      background: rgba(123, 144, 113, 0.5); }
-    .stripes.bottom ul li:nth-child(3) {
-      background: rgba(168, 95, 52, 0.5); }
-    .stripes.bottom ul li:nth-child(4) {
-      background: rgba(125, 135, 142, 0.5); }
-    .stripes.bottom ul li:nth-child(5) {
-      background: rgba(57, 57, 57, 0.5); }
-    .stripes.bottom ul li:before {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-      /* W3C */ }
-
+/* line 419, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
 .page {
-  transition: all 800ms ease-in-out;
-  box-sizing: border-box;
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -40%;
-  margin-top: -20%;
-  color: black;
-  padding: 40px;
-  width: 80%;
-  height: 80%;
-  background: rgba(255, 255, 255, 0.8);
-  opacity: 0;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  overflow-y: scroll; }
-  .page.is-active {
-    -webkit-animation: fadein 800ms 1 forwards;
-    animation: fadein 800ms 1 forwards; }
-    .page.is-active:before {
-      content: '';
-      position: absolute;
-      width: 90%;
-      height: 3%;
-      box-shadow: 0px 0px 10px 0px #000;
-      background: black;
-      bottom: -36px;
-      left: 5%;
-      opacity: 0.1;
-      border-radius: 100%; }
-
-.project-list {
+  width: 100vw;
+  margin: 0 auto;
   overflow: hidden; }
-  .project-list ul {
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    list-style: none; }
-  .project-list--item {
-    overflow: hidden;
-    box-sizing: border-box;
-    margin-bottom: 40px;
-    clear: right; }
-  .project-list a {
-    display: block;
-    text-decoration: none; }
-  .project-list--item-meta {
-    color: black;
-    overflow: hidden; }
-  .project-list--item-thumb {
-    width: 300px;
-    height: auto;
-    margin-right: 40px;
-    float: left; }
+
+/* line 427, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+.page-section-left, .page-section-middle, .page-section-right {
+  width: 30%;
+  float: left;
+  padding: 2rem; }
+
+/* line 433, /Users/jonny/Projects/Me/jonnyscholes.com/src/global.scss */
+.page-section-middle {
+  width: 40%; }
+

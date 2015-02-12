@@ -1,0 +1,25 @@
+.project-list {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&--item {
+		overflow: hidden;
+		box-sizing: border-box;
+		margin-bottom: 40px;
+		clear: right;
+	}
+		a {
+			display: block;
+			text-decoration: none;
+		}
+			&--item-meta {
+				color: black;
+				overflow: hidden;
+			}
+			&--item-thumb {
+				width: 100%;
+				height: auto;
+			}
+}

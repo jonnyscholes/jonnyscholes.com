@@ -38,7 +38,7 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 	};
 
 	app.pictureMoles = function(imageArray) {
-		var $canvasHolders = $('.top li');
+		var $canvasHolders = $('.moler--single');
 
 		$canvasHolders.each(function(i, elm){
 			var $currentCanvas = $(elm).find('canvas');
@@ -54,6 +54,9 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			$('body').mousemove(function (e){
 				mole(ctx, canvas);
 			});
+			$(window).scroll(function (e){
+				mole(ctx, canvas);
+			});
 		}
 
 		function mole(stage, can){
@@ -64,27 +67,27 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 	};
 
 	app.morphingMass = function() {
-		var $entryLink = $('.entry');
+		//var $entryLink = $('.entry');
 
-		$entryLink.click(function(e){
-			$('.page, .entry').toggleClass('is-active');
-			$('.paralax').toggleClass('is-exploded');
-			isAnimationMode = !isAnimationMode;
-			e.preventDefault();
-		});
+		//$entryLink.click(function(e){
+		//	$('.page, .entry').toggleClass('is-active');
+		//	$('.paralax').toggleClass('is-exploded');
+		//	isAnimationMode = !isAnimationMode;
+		//	e.preventDefault();
+		//});
 
 
 		// @todo: Make render take a magnitude from, to - on hover make the movement more pronounced
-		$entryLink.hover(
-			function hoverIn(){
-				ratelimit = 10;
-				currentFrame = 0;
-			},
-			function hoverOut(){
-				ratelimit = 30;
-				currentFrame = 0;
-			}
-		);
+		//$entryLink.hover(
+		//	function hoverIn(){
+		//		ratelimit = 10;
+		//		currentFrame = 0;
+		//	},
+		//	function hoverOut(){
+		//		ratelimit = 30;
+		//		currentFrame = 0;
+		//	}
+		//);
 
 		window.requestAnimationFrame(tick);
 

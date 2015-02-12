@@ -1,18 +1,13 @@
 extends _layout
-
 mixin project(url, imgurl, title, description)
 	li.project-list--item
 		a(href=url)
 			img.project-list--item-thumb(src=imgurl)
 			.project-list--item-meta
-				h2=title
+				h3=title
 				.description!=description
-
 block content
-	//include _menu
-
-	a(href="#").entry Jonny Scholes
-
+	.entry Jonny Scholes
 	.paralax
 		.item
 			img(src="images/1.png")
@@ -33,53 +28,56 @@ block content
 		.item
 			img(src="images/9.png")
 
-	.top.stripes
-		ul
-			li
-				canvas
-			li
-				canvas
-			li
-				canvas
-			li
-				canvas
-			li
-				canvas
-
-	.bottom.stripes
-		ul
-			li
-			li
-			li
-			li
-			li
-
-	.page
-		article
-			header
-				p I'm Jonny, a twenty something year old web developer, painter, photographer, designer and hacker from Hobart, Tasmania.
-				p I work for #[a(href='http://takeflight.com.au/') Takeflight] with awesome people in a great local coworking space called #[a(href='http://typewriterfactory.com/') The Typewriter Factory]. Come and say hello!
-
-			.projects
-				.project-list
-					h3 Projects:
+	.container
+		.top
+			ul.moler
+				li.moler--single
+					canvas
+				li.moler--single
+					canvas
+				li.moler--single
+					canvas
+				li.moler--single
+					canvas
+				li.moler--single
+					canvas
+		.shelf
+		.bottom
+			.page
+				.page-section-left
+					h2 Sup.
+					p I'm Jonny. A twenty something year old web developer, painter, photographer, designer and hacker from Hobart, Tasmania.
+					p I work for #[a(href='http://takeflight.com.au/') Takeflight] with awesome people in a great local coworking space called #[a(href='http://typewriterfactory.com/') The Typewriter Factory]. Come and say hello!
+					h3 Stalk me:
 					ul
+						li
+							a(href='http://twitter.com/jonnyscholes') Twitter
+						li
+							a(href='http://www.flickr.com/jonnyscholes') Flickr
+						li
+							a(href='http://github.com/jonnyscholes') Github
+
+					p © 2015 Jonny Scholes
+
+				.page-section-middle
+					h2 Projects
+					.project-list
 						+project(
 							'http://toolery.me/',
 							'./images/toolery.jpg',
-							'toolery.me - Ongoing',
+							'toolery.me',
 							'Everyday I need to make lots of little conversions and calculations when taking designs from Photoshop files to the web. This is a little tool I made to make all of that easier for myself (and perhaps others).'
 						)
 						+project(
 							'http://trapezium.io/',
 							'./images/trapezium.jpg',
-							'Trapezium - Ongoing',
+							'Trapezium',
 							'Trapezium is a 	news reader that presents the last 24 hours news (EST) based on how negative or positive the content is. Choose what you read based on how you want to feel!'
 						)
 						+project(
 							'http://altrove.totesprofe.sh/',
 							'./images/altrove.jpg',
-							'AlTrove - Ongoing',
+							'AlTrove',
 							'For GovHack 2014 we (#totesprofesh) recreated the homepage for TROVE.'
 						)
 						+project(
@@ -90,45 +88,27 @@ block content
 						+project(
 							'http://springclean.me/',
 							'./images/springclean.jpg',
-							'SpringClean.me - Ongoing',
+							'SpringClean.me',
 							'As a known privacy/security advocate in my extended social circles, I am often asked "What should I do to stay secure?". I got sick of reeling off the same list over and over so I made an interactive checklist to send people to.'
 						)
-
-				.project-list
-					h3 Selected Works:
-					ul
+				.page-section-right
+					h2 Selected Works
+					.project-list
 						+project(
 							'/experiments/artscapes/',
 							'./images/artscapes.jpg',
-							'Artscapes - February 2014',
+							'Artscapes - 2014',
 							''
 						)
 						+project(
 							'/experiments/mapfont/',
 							'./images/herebedragons.jpg',
-							'Mapfont - February 2014',
+							'Mapfont - 2014',
 							''
 						)
 						+project(
 							'/experiments/wavey/',
 							'./images/wavey.jpg',
-							'Wavey - August 2014',
+							'Wavey - 2014',
 							''
 						)
-
-			//
-			//h3 Stalk me:
-			//ul
-			//	li
-			//		a(href='http://twitter.com/jonnyscholes') Twitter
-			//	li
-			//		a(href='http://www.flickr.com/jonnyscholes') Flickr
-			//	li
-			//		a(href='http://github.com/jonnyscholes') Github
-			//
-			//
-			//footer © 2014 Jonny
-	.loading-pane
-		.loading-pane--title Jonny Scholes
-		.loading-pane--subtitle Paint. Code. Beer. Knick-knacks.
-		.loading-pane--status

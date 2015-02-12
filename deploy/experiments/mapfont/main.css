@@ -1,13 +1,16 @@
+/* line 2, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 html, body {
   height: 100%;
   padding: 0;
   margin: 0; }
 
+/* line 8, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .container {
   width: 0px;
   overflow: hidden;
   height: 100%; }
 
+/* line 14, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .container:before {
   content: '';
   display: inline-block;
@@ -15,19 +18,24 @@ html, body {
   vertical-align: middle;
   margin-right: -0.25em; }
 
+/* line 22, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .contain {
   position: relative;
   overflow: hidden;
   display: inline-block;
   vertical-align: middle; }
 
+/* line 30, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .cover, .covermap {
   position: absolute;
   top: 0;
   left: 0; }
 
+/* line 36, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .map {
   z-index: 1; }
 
+/* line 40, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/mapfont/main.scss */
 .cover {
   z-index: 2; }
+

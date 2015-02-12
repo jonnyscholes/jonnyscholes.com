@@ -1,3 +1,4 @@
+/* line 2, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/wavey/main.scss */
 html, body {
   height: 100%;
   padding: 0;
@@ -5,6 +6,7 @@ html, body {
   text-align: center;
   background: url('./images/bg.jpg') center center no-repeat; }
 
+/* line 10, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/wavey/main.scss */
 .container {
   position: relative;
   top: 50%;
@@ -20,3 +22,4 @@ html, body {
   max-width: 800px;
   max-height: 800px;
   border-radius: 100%; }
+

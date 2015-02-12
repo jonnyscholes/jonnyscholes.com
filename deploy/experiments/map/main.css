@@ -1,16 +1,18 @@
+/* line 2, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 html, body {
   height: 100%;
   padding: 0;
   margin: 0;
   text-align: center;
   background-color: #fff;
-  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, #000000), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, #000000);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px; }
 
 /*******************************************************************************
  viewer
 *******************************************************************************/
+/* line 19, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer {
   position: relative;
   top: 0;
@@ -21,10 +23,12 @@ html, body {
   width: 100%;
   height: 100%; }
 
+/* line 31, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer img {
   margin: 0px;
   float: none; }
 
+/* line 36, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .well, .viewer .surface {
   margin: 0;
   padding: 0;
@@ -38,16 +42,19 @@ html, body {
   cursor: grab;
   _cursor: url(images/grab.cur); }
 
+/* line 50, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .surface {
   z-index: 20;
   /*background: url(../gfx/center.gif) no-repeat center center;*/
   _background: url(images/blank.gif) no-repeat center center;
   /* NOTE: required for IE to"see" the surface */ }
 
+/* line 56, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .well {
   overflow: hidden;
   z-index: 10; }
 
+/* line 61, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .well .tile {
   border: 0;
   margin: 0;
@@ -60,6 +67,7 @@ html, body {
 /*******************************************************************************
  thumbnail
 *******************************************************************************/
+/* line 75, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail {
   position: absolute;
   right: 4px;
@@ -79,6 +87,7 @@ html, body {
   opacity: 0.8;
   filter: alpha(opacity=80); }
 
+/* line 98, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail img {
   position: absolute;
   top: 0px;
@@ -86,6 +95,7 @@ html, body {
   z-index: 30;
   overflow: hidden; }
 
+/* line 106, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail_scale {
   position: absolute;
   bottom: -2px;
@@ -95,6 +105,7 @@ html, body {
   z-index: 45;
   color: #FFFFFF; }
 
+/* line 116, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail_roi {
   position: absolute;
   top: 0px;
@@ -106,6 +117,7 @@ html, body {
   border: 2px solid #FF0000;
   z-index: 40; }
 
+/* line 128, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail_roi_preview {
   position: absolute;
   top: 0px;
@@ -117,6 +129,7 @@ html, body {
   border: 2px solid #FFFF00;
   z-index: 39; }
 
+/* line 140, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .thumbnail_surface {
   position: absolute;
   top: 0px;
@@ -128,6 +141,7 @@ html, body {
 /*******************************************************************************
  info
 *******************************************************************************/
+/* line 153, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .info {
   position: absolute;
   z-index: 25;
@@ -141,6 +155,7 @@ html, body {
   font-size: 12px;
   text-overflow: ellipsis; }
 
+/* line 167, /Users/jonny/Projects/Me/jonnyscholes.com/src/experiments/map/main.scss */
 .viewer .osd {
   position: absolute;
   z-index: 15;
@@ -154,3 +169,4 @@ html, body {
   text-shadow: 1px 1px 1px #000000;
   font-size: 12px;
   text-overflow: ellipsis; }
+

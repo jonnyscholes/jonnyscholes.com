@@ -1,110 +1,47 @@
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-    z-index: 200;
-    -webkit-transform: scale(2);
-    transform: scale(2); }
+/* ---------------------------------------------------------------------------
 
-  100% {
-    opacity: 1;
-    z-index: 200;
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
+	Content-first media queries
+	===========================
 
-@keyframes fadein {
-  0% {
-    opacity: 0;
-    z-index: 200;
-    -webkit-transform: scale(2);
-    transform: scale(2); }
+	Taken from Dominic Whittle with permission by Jonny Scholes
 
-  100% {
-    opacity: 1;
-    z-index: 200;
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
+	@TODO make these media query wrappers work as described.
 
-@-webkit-keyframes fadeout {
-  0% {
-    opacity: 1;
-    z-index: 200; }
+	from( n ) { ... }
+		Styles elements from (and inclusive) of n.
+		Useful for adding complexity as viewport size increases.
 
-  99% {
-    opacity: 0;
-    z-index: 200; }
+	to( n ) { ... }
+		Styles elements up to but not including n.
+		Effectively, max-width n-1
+		Useful for the occasional small screen only style.
 
-  100% {
-    opacity: 0;
-    z-index: 1; } }
+	n must be unitless CSS pixels; e.g., 768 or 1024
+	It gets converted to em.
 
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-    z-index: 200; }
+	from-to( x, y ) { ... }
 
-  99% {
-    opacity: 0;
-    z-index: 200; }
 
-  100% {
-    opacity: 0;
-    z-index: 1; } }
+	All take an additional $legacy parameter.
 
-@-webkit-keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(0) scale(.8);
-    transform: translateX(0) scale(.8); }
 
-  50% {
-    -webkit-transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1); }
+	// Examples
 
-  100% {
-    -webkit-transform: translateX(-100%) scale(.8);
-    transform: translateX(-100%) scale(.8); } }
+	@include to( $BreakpointSmall ) {
+		// max-width( 320/16em )
+		.nav {}
+	}
 
-@keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(0) scale(.8);
-    transform: translateX(0) scale(.8); }
+	@include from-to( $BreakpointMedium, 1280, legacy ) {
+		// min-width( 320/16em ), max-width( 1280-1  )
+		.nav {}
+	}
 
-  50% {
-    -webkit-transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1); }
-
-  100% {
-    -webkit-transform: translateX(-100%) scale(.8);
-    transform: translateX(-100%) scale(.8); } }
-
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0) scale(.8);
-    transform: translateX(0) scale(.8); }
-
-  50% {
-    -webkit-transform: translateX(50%) scale(1);
-    transform: translateX(50%) scale(1); }
-
-  100% {
-    -webkit-transform: translateX(100%) scale(.8);
-    transform: translateX(100%) scale(.8); } }
-
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0) scale(.8);
-    transform: translateX(0) scale(.8); }
-
-  50% {
-    -webkit-transform: translateX(50%) scale(1);
-    transform: translateX(50%) scale(1); }
-
-  100% {
-    -webkit-transform: translateX(100%) scale(.8);
-    transform: translateX(100%) scale(.8); } }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
-
+	@include from( 1280 ) {
+		// min-width 1280
+		.nav {}
+	}
+--------------------------------------------------------------------------- */
 .paralax {
   transition: all 500ms linear;
   -webkit-transform: scale(0.8);
@@ -276,6 +213,113 @@
       background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 50%);
       /* W3C */ }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    z-index: 200;
+    -webkit-transform: scale(2);
+    transform: scale(2); }
+
+  100% {
+    opacity: 1;
+    z-index: 200;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    z-index: 200;
+    -webkit-transform: scale(2);
+    transform: scale(2); }
+
+  100% {
+    opacity: 1;
+    z-index: 200;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+    z-index: 200; }
+
+  99% {
+    opacity: 0;
+    z-index: 200; }
+
+  100% {
+    opacity: 0;
+    z-index: 1; } }
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    z-index: 200; }
+
+  99% {
+    opacity: 0;
+    z-index: 200; }
+
+  100% {
+    opacity: 0;
+    z-index: 1; } }
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
+
+  50% {
+    -webkit-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1); }
+
+  100% {
+    -webkit-transform: translateX(-100%) scale(.8);
+    transform: translateX(-100%) scale(.8); } }
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
+
+  50% {
+    -webkit-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1); }
+
+  100% {
+    -webkit-transform: translateX(-100%) scale(.8);
+    transform: translateX(-100%) scale(.8); } }
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
+
+  50% {
+    -webkit-transform: translateX(50%) scale(1);
+    transform: translateX(50%) scale(1); }
+
+  100% {
+    -webkit-transform: translateX(100%) scale(.8);
+    transform: translateX(100%) scale(.8); } }
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0) scale(.8);
+    transform: translateX(0) scale(.8); }
+
+  50% {
+    -webkit-transform: translateX(50%) scale(1);
+    transform: translateX(50%) scale(1); }
+
+  100% {
+    -webkit-transform: translateX(100%) scale(.8);
+    transform: translateX(100%) scale(.8); } }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 body {
   margin: 0px;
   width: 100%;
@@ -284,19 +328,6 @@ body {
 
 h2, h3 {
   font-family: 'Cinzel', serif; }
-
-.entry {
-  transition: all 500ms linear;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 20;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: 'Cinzel', serif;
-  text-decoration: none;
-  color: #fff;
-  font-size: 30px; }
 
 .container {
   -webkit-perspective: 0px;

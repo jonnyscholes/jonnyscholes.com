@@ -2,12 +2,17 @@
 	transition: all 500ms linear;
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 40%;
 	z-index: 20;
 	transform: translate(-50%, -50%);
 	font-family: 'Cinzel', serif;
 	text-decoration: none;
 	color: #fff;
-	font-size: 30px;
+	font-size: 20px;
 }
 
+@include from(768) {
+	.entry {
+		font-size: 30px;
+	}
+}

@@ -1,19 +1,11 @@
 @import 'scss/dist/math';
 @import 'scss/mixins';
 
-@import 'scss/paralax';
-@import 'scss/project-list';
-@import 'scss/moler';
-@import 'scss/animations';
-
-
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 }
-
-
 
 
 body {
@@ -27,6 +19,14 @@ h2,
 h3 {
 	font-family: 'Cinzel', serif;
 }
+
+@import 'scss/animations';
+@import 'scss/entry';
+@import 'scss/paralax';
+@import 'scss/project-list';
+@import 'scss/moler';
+@import 'scss/page';
+
 
 $rotate: 60deg;
 $shelfHeight: 300px;
@@ -78,22 +78,4 @@ $shelfHeight: 300px;
 						rgba(#393939, 0.5) 80%, rgba(#393939, 0.5)
 		);
 	}
-}
-
-.page {
-	width: 100vw;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-.page-section-left,
-.page-section-middle,
-.page-section-right {
-	width: 30%;
-	float: left;
-	padding: 2rem;
-}
-
-.page-section-middle {
-	width: 40%;
 }

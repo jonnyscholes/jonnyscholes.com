@@ -44,19 +44,34 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 			var $currentCanvas = $(elm).find('canvas');
 			var currentCtx = $currentCanvas[0].getContext('2d');
 
-			fitToContainer($currentCanvas[0]);
+			fitToContainer($currentCanvas[0], elm);
 
-			currentCtx.drawImage(imageArray[i], 0, 0, $currentCanvas[0].width, $currentCanvas[0].height);
+			var ratio = $currentCanvas[0].width / imageArray[i].width;
+			var newHeight = imageArray[i].height * ratio;
+			var adjustment = parseInt(($currentCanvas[0].height - newHeight) / 2);
+
+			currentCtx.drawImage(imageArray[i], 0, adjustment, $currentCanvas[0].width, newHeight);
 			startRender(currentCtx, $currentCanvas[0]);
 		});
 
 		function startRender(ctx, canvas){
-			$('body').mousemove(function (e){
+
+			if ($(window).width() >= 1025) {
+				// Naieve 'isTabletOrPhone'
+				$('body').mousemove(function (e){
+					mole(ctx, canvas);
+				});
+				$(window).scroll(function (e){
+					mole(ctx, canvas);
+				});
+			} else {
+				window.requestAnimationFrame(moleTick);
+			}
+
+			function moleTick(timestamp) {
 				mole(ctx, canvas);
-			});
-			$(window).scroll(function (e){
-				mole(ctx, canvas);
-			});
+				window.requestAnimationFrame(moleTick);
+			}
 		}
 
 		function mole(stage, can){
@@ -67,28 +82,6 @@ window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequest
 	};
 
 	app.morphingMass = function() {
-		//var $entryLink = $('.entry');
-
-		//$entryLink.click(function(e){
-		//	$('.page, .entry').toggleClass('is-active');
-		//	$('.paralax').toggleClass('is-exploded');
-		//	isAnimationMode = !isAnimationMode;
-		//	e.preventDefault();
-		//});
-
-
-		// @todo: Make render take a magnitude from, to - on hover make the movement more pronounced
-		//$entryLink.hover(
-		//	function hoverIn(){
-		//		ratelimit = 10;
-		//		currentFrame = 0;
-		//	},
-		//	function hoverOut(){
-		//		ratelimit = 30;
-		//		currentFrame = 0;
-		//	}
-		//);
-
 		window.requestAnimationFrame(tick);
 
 		function tick(timestamp) {
@@ -123,9 +116,9 @@ function getRandomInRange(from, to) {
 	return (Math.random() * (to - from) + from).toFixed(0) * 1;
 }
 
-function fitToContainer(canvas){
+function fitToContainer(canvas, container){
 	canvas.style.width='100%';
 	canvas.style.height='100%';
-	canvas.width  = canvas.offsetWidth;
-	canvas.height = canvas.offsetHeight;
+	canvas.width  = $(container).width();
+	canvas.height = $(container).height();
 }

@@ -1,0 +1,27 @@
+.page {
+	width: 100vw;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.page-section-left,
+	.page-section-middle,
+	.page-section-right {
+		padding: 0 1rem 1rem 1rem;
+	}
+
+
+
+@include from(768) {
+	.page-section-left,
+	.page-section-middle,
+	.page-section-right {
+		width: 30%;
+		float: left;
+		padding: 2rem;
+	}
+
+	.page-section-middle {
+		width: 40%;
+	}
+}

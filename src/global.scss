@@ -33,6 +33,7 @@ $shelfHeight: 300px;
 
 .container {
 	perspective: 0px;
+	overflow-x: hidden;
 
 	.top {
 		position: relative;

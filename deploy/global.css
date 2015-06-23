@@ -319,7 +319,8 @@ h2, h3 {
 
 .container {
   -webkit-perspective: 0px;
-  perspective: 0px; }
+  perspective: 0px;
+  overflow-x: hidden; }
   .container .top {
     position: relative;
     height: calc(100vh - 400px);
